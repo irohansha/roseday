@@ -2,84 +2,107 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  background: radial-gradient(circle, #ff4e50, #f9d423);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
   color: white;
 }
 
-.container {
+/* Glass Card */
+.card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 35px;
   text-align: center;
+  width: 320px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  z-index: 10;
 }
-
-.rose {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  margin: auto;
-  animation: bloom 2.5s infinite alternate;
-}
-
-.petal {
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  background: crimson;
-  border-radius: 50% 50% 0 50%;
-  transform-origin: bottom right;
-}
-
-.p1 { transform: rotate(0deg); }
-.p2 { transform: rotate(72deg); }
-.p3 { transform: rotate(144deg); }
-.p4 { transform: rotate(216deg); }
-.p5 { transform: rotate(288deg); }
 
 h1 {
-  margin-top: 30px;
-  font-size: 2.2rem;
+  font-size: 1.9rem;
 }
 
+#typewriter {
+  display: inline-block;
+  margin: 15px 0;
+  font-size: 1.6rem;
+  color: #fff;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Text */
 p {
   margin: 15px 0;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
 }
 
+/* Button */
 button {
-  background: white;
-  color: crimson;
-  border: none;
+  margin-top: 15px;
   padding: 10px 22px;
   border-radius: 25px;
+  border: none;
   font-size: 1rem;
+  background: white;
+  color: #ff4e50;
   cursor: pointer;
   transition: 0.3s;
 }
 
 button:hover {
-  background: crimson;
+  background: #ff4e50;
   color: white;
 }
 
-#message {
+/* Hidden message */
+#hiddenText {
   display: none;
   margin-top: 20px;
-  font-size: 1.2rem;
-  animation: fadeIn 1.5s ease-in;
+  font-size: 1.1rem;
+  animation: fadeIn 1.5s ease;
 }
 
-@keyframes bloom {
-  from { transform: scale(0.9); }
-  to { transform: scale(1.1); }
+/* Floating hearts */
+.hearts-bg span {
+  position: absolute;
+  bottom: -30px;
+  font-size: 18px;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
 }
 
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+/* Click heart */
+.click-heart {
+  position: absolute;
+  color: pink;
+  font-size: 20px;
+  animation: pop 1.2s forwards;
+}
+
+@keyframes pop {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(2); opacity: 0; }
 }
