@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./RoseDay.css";
 
 export default function RoseDay() {
-  const fullName = "@@@@@"; // 👉 change name here
+  const fullName = "@kshita"; // 👉 change name here
   const [text, setText] = useState("");
   const [showMessage, setShowMessage] = useState(false);
 
