@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle, #ff4e50, #f9d423);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Card */
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 35px;
+  width: 320px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+h1 {
+  font-size: 1.9rem;
+}
+
+/* Typewriter name */
+#typewriter {
+  display: inline-block;
+  margin: 15px 0;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white;
+  padding-right: 6px;
+}
+
+/* Text */
+p {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+/* Button */
+button {
+  margin-top: 15px;
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: none;
+  background: white;
+  color: #ff4e50;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff4e50;
+  color: white;
+}
+
+/* Hidden message */
+#hiddenText {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  animation: fadeIn 1.3s ease;
+}
+
+/* Hearts background */
+.hearts-bg span {
+  position: absolute;
+  bottom: -30px;
+  font-size: 18px;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
