@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./RoseDay.css";
 
 export default function RoseDay() {
-  const fullName = "Ravali"; // 👉 change name here
+  const fullName = "rohan"; // 👉 change name here
   const [text, setText] = useState("");
   const [showMessage, setShowMessage] = useState(false);
 
@@ -28,9 +28,9 @@ export default function RoseDay() {
         <h2 id="typewriter">{text}</h2>
 
         <p>
-          A rose for my beautiful wife
+          A rose for you
           <br />
-          Aaradhya❤️
+          1
         </p>
 
         <button onClick={() => setShowMessage(true)}>
@@ -41,7 +41,7 @@ export default function RoseDay() {
           <div id="hiddenText">
             You make ordinary moments feel special 🌸
             <br />
-            love you maa❤️
+            I'm grateful for every smile you bring into my life 😊
             <br />
             Happy Rose Day ❤️
           </div>
